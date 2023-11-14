@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "automeda_backend": {
+      "main": "src/automeda_backend/main.mo",
+      "type": "motoko"
+    },
+    "automeda_frontend": {
+      "dependencies": [
+        "automeda_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/automeda_frontend/src/index.html"
+      },
+      "source": [
+        "src/automeda_frontend/assets",
+        "dist/automeda_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
